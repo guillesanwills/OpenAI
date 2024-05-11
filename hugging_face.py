@@ -9,7 +9,7 @@ llm = HuggingFaceEndpoint(
     repo_id="mistralai/Mistral-7B-Instruct-v0.2")
 
 # The LLM takes a prompt as an input and outputs a completion
-our_query = "What is the currency of India?"
+our_query = "What are some known catalan political leaders?"
 
 #Submit prompt to the LLM
 completion = llm.invoke(our_query)
