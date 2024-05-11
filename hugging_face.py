@@ -1,7 +1,9 @@
 from langchain_community.llms import HuggingFaceEndpoint
-
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+from dotenv import load_dotenv
+
+load_dotenv()
+HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 llm = HuggingFaceEndpoint(
     repo_id="mistralai/Mistral-7B-Instruct-v0.2")
